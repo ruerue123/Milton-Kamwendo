@@ -43,6 +43,30 @@ export default {
         'section': '8rem',
         'section-sm': '5rem',
       },
+      keyframes: {
+        shimmer: {
+          '0%': { backgroundPosition: '-200% 0' },
+          '100%': { backgroundPosition: '200% 0' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-8px)' },
+        },
+        'pulse-gold': {
+          '0%, 100%': { opacity: '0.3' },
+          '50%': { opacity: '0.6' },
+        },
+        'ken-burns': {
+          '0%': { transform: 'scale(1.0)' },
+          '100%': { transform: 'scale(1.15)' },
+        },
+      },
+      animation: {
+        shimmer: 'shimmer 3s ease-in-out infinite',
+        float: 'float 6s ease-in-out infinite',
+        'pulse-gold': 'pulse-gold 4s ease-in-out infinite',
+        'ken-burns': 'ken-burns 20s ease-in-out infinite alternate',
+      },
     },
   },
   plugins: [],

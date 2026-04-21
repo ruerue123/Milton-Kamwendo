@@ -10,7 +10,7 @@ export function ShopPage() {
         eyebrow="Shop"
         title="Books by Milton"
         subtitle="Ideas that transform — available in the Improvement Series and Hunt for Greatness collections."
-        backgroundImage="/milton2-casual.jpeg"
+        backgroundImage="/milton8.jpeg"
       />
       <ShopSection />
     </PageTransition>

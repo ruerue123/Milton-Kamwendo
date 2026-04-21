@@ -41,7 +41,7 @@ export function TopicsSection() {
       {/* Background image */}
       <div className="absolute inset-0">
         <img
-          src="/milton-outdoor.jpeg"
+          src="/milton11.jpeg"
           alt=""
           className="w-full h-full object-cover opacity-[0.07]"
         />

@@ -17,16 +17,21 @@ export function CTASection({
 }: CTASectionProps) {
   return (
     <section className="relative py-section-sm md:py-section overflow-hidden">
-      {/* Background image */}
+      {/* Background image with Ken Burns */}
       <div className="absolute inset-0">
         <img
-          src="/milton-proffessional.jpeg"
+          src="/milton1.png"
           alt=""
-          className="w-full h-full object-cover opacity-20"
+          className="w-full h-full object-cover opacity-20 animate-ken-burns"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/70"></div>
       </div>
-      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-gold/20 to-transparent"></div>
+      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-gold/20 to-transparent animate-pulse-gold"></div>
+
+      {/* Floating gold accents */}
+      <div className="absolute top-1/4 left-[10%] w-px h-16 bg-gradient-to-b from-gold/20 to-transparent animate-float hidden md:block" style={{ animationDelay: '0s' }} />
+      <div className="absolute bottom-1/3 right-[15%] w-px h-12 bg-gradient-to-b from-gold/15 to-transparent animate-float hidden md:block" style={{ animationDelay: '2s' }} />
+      <div className="absolute top-1/3 right-[8%] w-8 h-px bg-gradient-to-r from-gold/20 to-transparent animate-float hidden md:block" style={{ animationDelay: '4s' }} />
 
       <div className="relative z-10 max-w-3xl mx-auto px-6 lg:px-8 text-center">
         <motion.h2
@@ -52,12 +57,14 @@ export function CTASection({
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
         >
-          <Link
-            to={buttonLink}
-            className="inline-flex items-center justify-center px-12 py-4 text-sm font-semibold uppercase tracking-[0.15em] text-primary bg-gold hover:bg-gold-light transition-colors duration-300"
-          >
-            {buttonText}
-          </Link>
+          <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
+            <Link
+              to={buttonLink}
+              className="inline-flex items-center justify-center px-12 py-4 text-sm font-semibold uppercase tracking-[0.15em] text-primary bg-gold hover:bg-gold-light transition-colors duration-300 hover:shadow-[0_0_30px_rgba(201,161,74,0.25)]"
+            >
+              {buttonText}
+            </Link>
+          </motion.div>
         </motion.div>
       </div>
     </section>

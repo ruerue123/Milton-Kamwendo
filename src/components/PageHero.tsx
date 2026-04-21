@@ -12,7 +12,7 @@ export function PageHero({
   title,
   subtitle,
   eyebrow,
-  backgroundImage = '/milton-speaking.jpeg',
+  backgroundImage = '/milton6.jpeg',
 }: PageHeroProps) {
   return (
     <section className="relative pt-40 pb-24 md:pt-48 md:pb-30 bg-primary overflow-hidden">

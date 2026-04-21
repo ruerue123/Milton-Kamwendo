@@ -28,3 +28,45 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #C9A14A;
   color: #0B0B0B;
 }
+
+/* Gold shimmer text effect */
+.gold-shimmer {
+  background: linear-gradient(
+    110deg,
+    #C9A14A 0%,
+    #D4B064 40%,
+    #F5E6B8 50%,
+    #D4B064 60%,
+    #C9A14A 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animated gold underline */
+.gold-underline {
+  position: relative;
+}
+.gold-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #C9A14A;
+  transition: width 0.4s ease;
+}
+.gold-underline:hover::after {
+  width: 100%;
+}
+
+/* Scroll progress bar */
+.scroll-progress {
+  background: linear-gradient(90deg, #C9A14A, #D4B064);
+  transform-origin: left;
+  will-change: transform;
+}

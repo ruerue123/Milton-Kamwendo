@@ -1,16 +1,72 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { PageTransition } from '../components/PageTransition';
 import { CTASection } from '../components/CTASection';
 import { ArrowRightIcon } from 'lucide-react';
 
 const achievements = [
-  { value: '20+', label: 'Years Experience' },
-  { value: '8+', label: 'Books Published' },
-  { value: '30+', label: 'Countries' },
-  { value: '500+', label: 'Keynotes' },
+  { value: 20, suffix: '+', label: 'Years Experience' },
+  { value: 8, suffix: '+', label: 'Books Published' },
+  { value: 30, suffix: '+', label: 'Countries' },
+  { value: 500, suffix: '+', label: 'Keynotes' },
 ];
+
+function useCountUp(target: number, inView: boolean, duration = 2000) {
+  const [count, setCount] = useState(0);
+  const hasAnimated = useRef(false);
+  useEffect(() => {
+    if (!inView || hasAnimated.current) return;
+    hasAnimated.current = true;
+    const start = performance.now();
+    const step = (now: number) => {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setCount(Math.floor(eased * target));
+      if (progress < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }, [inView, target, duration]);
+  return count;
+}
+
+function StatItem({ stat, delay }: { stat: typeof achievements[number]; delay: number }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: true });
+  const count = useCountUp(stat.value, inView);
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.4, delay }}
+      className="text-center"
+    >
+      <p className="font-serif font-bold text-3xl text-white mb-1">
+        {count}{stat.suffix}
+      </p>
+      <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-neutral-500">
+        {stat.label}
+      </p>
+    </motion.div>
+  );
+}
+
+function StatsSection() {
+  return (
+    <section className="py-12 bg-primary border-y border-white/5">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {achievements.map((stat, i) => (
+            <StatItem key={i} stat={stat} delay={i * 0.1} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export function AboutPage() {
   return (
@@ -19,7 +75,7 @@ export function AboutPage() {
       <section className="relative pt-40 pb-24 md:pt-52 md:pb-30 bg-primary overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/milton-speaking.jpeg"
+            src="/milton6.jpeg"
             alt=""
             className="w-full h-full object-cover opacity-15 blur-sm scale-105"
           />
@@ -59,27 +115,8 @@ export function AboutPage() {
       </section>
 
       {/* Stats */}
-      <section className="py-12 bg-primary border-y border-white/5">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {achievements.map((stat, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.1 }}
-                className="text-center"
-              >
-                <p className="font-serif font-bold text-3xl text-white mb-1">{stat.value}</p>
-                <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-neutral-500">
-                  {stat.label}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <StatsSection />
+
 
       {/* Story Section */}
       <section className="py-section-sm md:py-section bg-primary">
@@ -95,7 +132,7 @@ export function AboutPage() {
             >
               <div className="relative">
                 <img
-                  src="/milton-outdoor.jpeg"
+                  src="/milton11.jpeg"
                   alt="Milton Kamwendo"
                   className="w-full aspect-[4/5] object-cover object-top"
                 />
@@ -219,7 +256,7 @@ export function AboutPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <img
-                src="/milton2-casual.jpeg"
+                src="/milton8.jpeg"
                 alt="Milton Kamwendo"
                 className="w-full aspect-square object-cover object-top"
               />

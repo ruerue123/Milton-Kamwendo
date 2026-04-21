@@ -9,7 +9,7 @@ const products = [
     description:
       'A powerful guide to pushing past limitations and pressing toward your greatness.',
     category: 'Improvement Series',
-    cover: 'bg-gradient-to-br from-amber-800 to-amber-950',
+    coverImage: '/ Books/movetheneedle.png',
     badge: 'Bestseller',
     amazonUrl: 'https://www.amazon.com/gp/product/B0DGN68QZS/',
   },
@@ -19,7 +19,7 @@ const products = [
     description:
       'Discover the steps to building a lasting legacy by increasing your personal and professional worth.',
     category: 'Improvement Series',
-    cover: 'bg-gradient-to-br from-yellow-700 to-amber-900',
+    coverImage: '/ Books/increaseyourworth.png',
     badge: null,
     amazonUrl: 'https://www.amazon.com/gp/product/B0DJDGHC55/',
   },
@@ -29,7 +29,7 @@ const products = [
     description:
       'Practical keys and insights to break through barriers and reach new heights of success.',
     category: 'Improvement Series',
-    cover: 'bg-gradient-to-br from-neutral-600 to-neutral-800',
+    coverImage: '/ Books/unlockthenextlevel.png',
     badge: null,
     amazonUrl: 'https://www.amazon.com/stores/Milton-Kamwendo/author/B00JH3YS8Q',
   },
@@ -39,7 +39,7 @@ const products = [
     description:
       'An inspiring call to pursue your dreams with energy, passion, and determination.',
     category: 'Improvement Series',
-    cover: 'bg-gradient-to-br from-yellow-500 to-yellow-700',
+    coverImage: '/ Books/danceandpursue.png',
     badge: 'New',
     amazonUrl: 'https://www.amazon.com/stores/Milton-Kamwendo/author/B00JH3YS8Q',
   },
@@ -49,7 +49,7 @@ const products = [
     description:
       'Begin your journey to discovering and pursuing the greatness within you.',
     category: 'Hunt for Greatness Series',
-    cover: 'bg-gradient-to-br from-amber-700 to-red-900',
+    coverImage: '/ Books/huntforgreatness.png',
     badge: null,
     amazonUrl: 'https://www.amazon.com/gp/product/B0DF5N3VCZ/',
   },
@@ -59,7 +59,7 @@ const products = [
     description:
       'Deeper insights, bolder strategies, and more powerful frameworks for transformation.',
     category: 'Hunt for Greatness Series',
-    cover: 'bg-gradient-to-br from-teal-700 to-teal-900',
+    coverImage: '/ Books/huntforgreatness2.png',
     badge: null,
     amazonUrl: 'https://www.amazon.com/gp/product/B0DG663CW9/',
   },
@@ -69,7 +69,7 @@ const products = [
     description:
       'Advanced principles for sustaining greatness and leaving a lasting impact.',
     category: 'Hunt for Greatness Series',
-    cover: 'bg-gradient-to-br from-blue-800 to-indigo-900',
+    coverImage: '/ Books/huntforgreatness3.png',
     badge: null,
     amazonUrl: 'https://www.amazon.com/gp/product/B0DGY1FKZS/',
   },
@@ -79,7 +79,7 @@ const products = [
     description:
       'A bold declaration that your time is now. Stop waiting and start unleashing the greatness within.',
     category: 'Improvement Series',
-    cover: 'bg-gradient-to-br from-red-800 to-red-950',
+    coverImage: '/ Books/itstime.png',
     badge: 'Popular',
     amazonUrl: 'https://www.amazon.com/gp/product/B0DKJZPXTZ/',
   },
@@ -151,19 +151,11 @@ export function ShopSection() {
                       {product.badge}
                     </span>
                   )}
-                  <div
-                    className={`w-full aspect-[2/3] ${product.cover} border-l-2 border-gold/30 flex flex-col items-center justify-center p-5 text-center transform transition-all duration-500 group-hover:-translate-y-1`}
-                  >
-                    <p className="text-[9px] text-white/50 uppercase tracking-[0.2em] mb-2">
-                      Milton Kamwendo
-                    </p>
-                    <h4 className="font-serif font-bold text-base text-white mb-1 leading-tight">
-                      {product.title}
-                    </h4>
-                    <p className="text-[11px] text-white/60 italic">
-                      {product.subtitle}
-                    </p>
-                  </div>
+                  <img
+                    src={product.coverImage}
+                    alt={`${product.title} - ${product.subtitle}`}
+                    className="w-full aspect-[2/3] object-cover border-l-2 border-gold/30 transform transition-all duration-500 group-hover:-translate-y-1"
+                  />
                 </div>
 
                 {/* Info */}

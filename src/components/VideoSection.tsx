@@ -26,7 +26,7 @@ export function VideoSection() {
             </p>
             <div className="flex items-center gap-6">
               <img
-                src="/milton2-casual.jpeg"
+                src="/milton2.jpeg"
                 alt="Milton Kamwendo"
                 className="w-16 h-16 rounded-full object-cover object-top border-2 border-gold/30"
               />
@@ -46,7 +46,7 @@ export function VideoSection() {
             className="relative aspect-video bg-primary-mid border border-white/5 overflow-hidden group cursor-pointer"
           >
             <img
-              src="/milton-speaking.jpeg"
+              src="/milton11.jpeg"
               alt="Milton Kamwendo speaking"
               className="w-full h-full object-cover opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-700"
             />

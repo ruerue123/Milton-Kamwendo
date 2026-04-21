@@ -65,7 +65,7 @@ export function InsightsPage() {
         eyebrow="Insights"
         title="Thinking That Moves"
         subtitle="Ideas, frameworks, and perspectives on leadership, strategy, and the discipline of greatness."
-        backgroundImage="/milton-outdoor.jpeg"
+        backgroundImage="/milton11.jpeg"
       />
 
       <section className="py-section-sm md:py-section bg-primary">

@@ -9,21 +9,21 @@ const services = [
     description:
       'Transformational keynotes that shift mindsets, challenge assumptions, and inspire leaders to take decisive action.',
     link: '/speaking',
-    image: '/milton-speaking.jpeg',
+    image: '/milton5.jpg',
   },
   {
     title: 'Strategy & Consulting',
     description:
       'Cutting-edge organizational strategy that turns complex challenges into clear, executable roadmaps for growth.',
     link: '/consulting',
-    image: '/milton-proffessional.jpeg',
+    image: '/milton9.jpeg',
   },
   {
     title: 'Workshops & Facilitation',
     description:
       'Interactive sessions that align teams, build resilient cultures, and drive measurable performance outcomes.',
     link: '/consulting',
-    image: '/milton-outdoor.jpeg',
+    image: '/milton10.jpeg',
   },
 ];
 
@@ -60,16 +60,17 @@ export function ServicesSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.15 }}
             >
+              <motion.div whileHover={{ y: -8 }} transition={{ duration: 0.3 }}>
               <Link
                 to={service.link}
-                className="group block h-full bg-primary border border-white/5 hover:border-gold/20 overflow-hidden transition-all duration-500"
+                className="group block h-full bg-primary border border-white/5 hover:border-gold/30 overflow-hidden transition-all duration-500 hover:shadow-[0_0_30px_rgba(201,161,74,0.08)]"
               >
                 {/* Image */}
                 <div className="relative h-56 md:h-48 lg:h-56 overflow-hidden">
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
+                    className="w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-110 transition-all duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/40 to-transparent"></div>
                 </div>
@@ -84,10 +85,11 @@ export function ServicesSection() {
                   </p>
                   <span className="inline-flex items-center text-[12px] font-semibold uppercase tracking-[0.15em] text-gold group-hover:text-gold-light transition-colors">
                     Learn More
-                    <ArrowRightIcon className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRightIcon className="ml-2 w-4 h-4 group-hover:translate-x-2 transition-transform duration-300" />
                   </span>
                 </div>
               </Link>
+              </motion.div>
             </motion.div>
           ))}
         </div>

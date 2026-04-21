@@ -66,7 +66,7 @@ export function ConsultingPage() {
         eyebrow="Consulting & Workshops"
         title="Strategy That Moves"
         subtitle="From boardroom to breakthrough — Milton partners with organizations to turn strategic intent into decisive action."
-        backgroundImage="/milton-proffessional.jpeg"
+        backgroundImage="/milton9.jpeg"
       />
 
       {/* Services */}

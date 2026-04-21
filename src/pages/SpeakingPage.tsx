@@ -65,7 +65,7 @@ export function SpeakingPage() {
         eyebrow="Speaking"
         title="Keynotes That Transform"
         subtitle="Milton delivers high-impact keynotes that shift thinking, challenge assumptions, and move audiences to decisive action."
-        backgroundImage="/milton-speaking.jpeg"
+        backgroundImage="/milton6.jpeg"
       />
 
       {/* Keynote Topics */}

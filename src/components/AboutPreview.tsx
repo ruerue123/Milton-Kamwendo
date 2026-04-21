@@ -18,7 +18,7 @@ export function AboutPreview() {
           >
             <div className="relative overflow-hidden">
               <img
-                src="/milton-outdoor.jpeg"
+                src="/milton11.jpeg"
                 alt="Milton Kamwendo"
                 className="w-full aspect-[4/5] object-cover object-top"
               />

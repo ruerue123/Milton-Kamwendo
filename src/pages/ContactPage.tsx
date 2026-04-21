@@ -37,7 +37,7 @@ export function ContactPage() {
         eyebrow="Contact"
         title="Let's Start a Conversation"
         subtitle="Whether you're planning an event, seeking strategic counsel, or exploring partnership — reach out."
-        backgroundImage="/milton-proffessional.jpeg"
+        backgroundImage="/milton1.png"
       />
 
       <section className="py-section-sm md:py-section bg-primary">

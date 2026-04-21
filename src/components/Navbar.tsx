@@ -8,8 +8,14 @@ export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 
+  const [scrollProgress, setScrollProgress] = useState(0);
+
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 20);
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      setScrollProgress(totalHeight > 0 ? window.scrollY / totalHeight : 0);
+    };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -29,6 +35,12 @@ export function Navbar() {
   ];
 
   return (
+    <>
+    {/* Scroll progress bar */}
+    <div
+      className="scroll-progress fixed top-0 left-0 h-[2px] z-[60]"
+      style={{ transform: `scaleX(${scrollProgress})` }}
+    />
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
@@ -54,7 +66,7 @@ export function Navbar() {
                 <Link
                   key={link.name}
                   to={link.href}
-                  className={`text-[13px] font-medium uppercase tracking-[0.15em] transition-colors duration-300 ${
+                  className={`text-[13px] font-medium uppercase tracking-[0.15em] transition-colors duration-300 gold-underline ${
                     isActive
                       ? 'text-gold'
                       : 'text-neutral-400 hover:text-white'
@@ -127,5 +139,6 @@ export function Navbar() {
         )}
       </AnimatePresence>
     </nav>
+    </>
   );
 }

@@ -10,8 +10,8 @@ interface CTASectionProps {
 }
 
 export function CTASection({
-  headline = 'Bring Milton to Your Organisation',
-  subtext = 'Transform your next event, strategy session, or leadership programme with a keynote that moves people to action.',
+  headline = 'Ready to Move the Needle?',
+  subtext = 'Bring Milton to your next conference, boardroom, or leadership programme. Book a keynote, a strategy session, or a workshop that moves people from intention to action.',
   buttonText = 'Book Milton',
   buttonLink = '/contact',
 }: CTASectionProps) {
@@ -38,7 +38,7 @@ export function CTASection({
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl lg:text-display-sm font-serif font-bold text-white mb-6"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-display-sm font-serif font-bold text-white mb-6 leading-[1.15] md:leading-[1.1]"
         >
           {headline}
         </motion.h2>
@@ -47,7 +47,7 @@ export function CTASection({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="text-neutral-400 text-lg leading-relaxed font-light mb-12"
+          className="text-neutral-400 text-base md:text-lg leading-relaxed font-light mb-10 md:mb-12"
         >
           {subtext}
         </motion.p>
@@ -60,7 +60,7 @@ export function CTASection({
           <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
             <Link
               to={buttonLink}
-              className="inline-flex items-center justify-center px-12 py-4 text-sm font-semibold uppercase tracking-[0.15em] text-primary bg-gold hover:bg-gold-light transition-colors duration-300 hover:shadow-[0_0_30px_rgba(201,161,74,0.25)]"
+              className="inline-flex items-center justify-center px-8 sm:px-12 py-4 text-xs sm:text-sm font-semibold uppercase tracking-[0.15em] text-primary bg-gold hover:bg-gold-light transition-colors duration-300 hover:shadow-[0_0_30px_rgba(201,161,74,0.25)]"
             >
               {buttonText}
             </Link>

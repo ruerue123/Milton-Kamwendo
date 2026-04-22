@@ -3,8 +3,13 @@ import { motion } from 'framer-motion';
 import { PageTransition } from '../components/PageTransition';
 import { PageHero } from '../components/PageHero';
 import { SendIcon, MailIcon, MapPinIcon } from 'lucide-react';
+import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
 export function ContactPage() {
+  useDocumentMeta(
+    'Contact',
+    "Book Milton for a keynote, strategic counsel, or partnership. Let's start a conversation."
+  );
   const [formState, setFormState] = useState({
     name: '',
     email: '',
@@ -35,14 +40,14 @@ export function ContactPage() {
     <PageTransition>
       <PageHero
         eyebrow="Contact"
-        title="Let's Start a Conversation"
-        subtitle="Whether you're planning an event, seeking strategic counsel, or exploring partnership — reach out."
+        title="Let's Start the Conversation"
+        subtitle="A keynote, a strategy session, a workshop, a partnership. Tell Milton what you are working on and how he can help you move the needle."
         backgroundImage="/milton1.png"
       />
 
       <section className="py-section-sm md:py-section bg-primary">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 lg:gap-24">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-24">
             {/* Contact Info */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -114,7 +119,7 @@ export function ContactPage() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-500 mb-3">
                         Full Name

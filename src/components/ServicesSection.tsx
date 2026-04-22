@@ -5,23 +5,23 @@ import { ArrowRightIcon } from 'lucide-react';
 
 const services = [
   {
-    title: 'Speaking',
+    title: 'Keynote Speaking',
     description:
-      'Transformational keynotes that shift mindsets, challenge assumptions, and inspire leaders to take decisive action.',
+      'Keynotes that shift mindsets, not just schedules. Audiences leave with a framework, a challenge, and the courage to act.',
     link: '/speaking',
     image: '/milton5.jpg',
   },
   {
     title: 'Strategy & Consulting',
     description:
-      'Cutting-edge organizational strategy that turns complex challenges into clear, executable roadmaps for growth.',
+      'Close the gap between strategy and execution. Milton partners with leadership teams to turn vision into daily disciplines.',
     link: '/consulting',
     image: '/milton9.jpeg',
   },
   {
     title: 'Workshops & Facilitation',
     description:
-      'Interactive sessions that align teams, build resilient cultures, and drive measurable performance outcomes.',
+      'Hands-on sessions that build mission clarity, forge team alignment, and equip people to march forward together.',
     link: '/consulting',
     image: '/milton10.jpeg',
   },
@@ -45,9 +45,9 @@ export function ServicesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-display-sm font-serif font-bold text-white"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-display-sm font-serif font-bold text-white leading-tight"
           >
-            Areas of Expertise
+            Three Ways to Work Together
           </motion.h2>
         </div>
 

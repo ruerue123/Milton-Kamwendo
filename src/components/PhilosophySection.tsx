@@ -3,9 +3,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeftIcon, ChevronRightIcon } from 'lucide-react';
 
 const statements = [
-  'Greatness is not a destination. It is a discipline.',
-  'Strategy without action is philosophy. Action without strategy is chaos.',
-  'The question is not whether you have potential. The question is whether you will act on it.',
+  'Growth never comes by accident. It is intentional and disciplined.',
+  'You cannot talk yourself out of situations you behave yourself into.',
+  'Greatness is not a gentle stroll in a garden. It is a march across a battlefield.',
+  'Small changes lead to great destinations.',
+  'Courage is not the absence of fear. Courage is mastery over fear.',
 ];
 
 export function PhilosophySection() {
@@ -55,7 +57,7 @@ export function PhilosophySection() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: direction * -80 }}
               transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
-              className="font-serif text-3xl md:text-5xl lg:text-display-sm text-white/90 leading-snug md:leading-tight text-center italic w-full"
+              className="font-serif text-xl sm:text-2xl md:text-4xl lg:text-5xl text-white/90 leading-snug md:leading-tight text-center italic w-full px-2"
             >
               "{statements[current]}"
             </motion.blockquote>

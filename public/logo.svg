@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 160" fill="none" font-family="Georgia, 'Playfair Display', serif">
+  <!-- MK monogram -->
+  <text x="130" y="80" text-anchor="middle"
+    font-weight="900" font-size="96" fill="#FAFAFA" letter-spacing="-6">MK</text>
+  <!-- Wordmark -->
+  <text x="130" y="112" text-anchor="middle"
+    font-weight="400" font-size="20" fill="#FAFAFA" letter-spacing="1">Milton</text>
+  <text x="130" y="134" text-anchor="middle"
+    font-weight="700" font-size="20" fill="#FAFAFA" letter-spacing="1">Kamwendo</text>
+  <!-- Tagline -->
+  <text x="130" y="154" text-anchor="middle"
+    font-weight="400" font-style="italic" font-size="10" fill="#C9A14A" letter-spacing="2">
+    PROMOTING GREATNESS
+  </text>
+</svg>

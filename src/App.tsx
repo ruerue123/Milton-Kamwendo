@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Routes,
   Route,
   useLocation,
@@ -14,6 +14,7 @@ import { SpeakingPage } from './pages/SpeakingPage';
 import { ConsultingPage } from './pages/ConsultingPage';
 import { ShopPage } from './pages/ShopPage';
 import { InsightsPage } from './pages/InsightsPage';
+import { InsightDetailPage } from './pages/InsightDetailPage';
 import { ContactPage } from './pages/ContactPage';
 
 function AnimatedRoutes() {
@@ -27,6 +28,7 @@ function AnimatedRoutes() {
         <Route path="/consulting" element={<ConsultingPage />} />
         <Route path="/shop" element={<ShopPage />} />
         <Route path="/insights" element={<InsightsPage />} />
+        <Route path="/insights/:slug" element={<InsightDetailPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </AnimatePresence>

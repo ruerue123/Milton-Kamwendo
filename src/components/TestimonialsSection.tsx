@@ -51,7 +51,7 @@ export function TestimonialsSection() {
           <p className="text-gold text-[11px] font-semibold uppercase tracking-[0.25em] mb-4">
             Impact
           </p>
-          <h2 className="text-4xl md:text-5xl lg:text-display-sm font-serif font-bold text-white">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-display-sm font-serif font-bold text-white leading-tight">
             What Leaders Say
           </h2>
         </div>
@@ -94,11 +94,17 @@ export function TestimonialsSection() {
                 setDirection(i > current ? 1 : -1);
                 setCurrent(i);
               }}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                i === current ? 'bg-gold w-6' : 'bg-neutral-700 hover:bg-neutral-500'
-              }`}
+              className="w-11 h-11 flex items-center justify-center group"
               aria-label={`Go to testimonial ${i + 1}`}
-            />
+            >
+              <span
+                className={`block h-2 rounded-full transition-all duration-300 ${
+                  i === current
+                    ? 'bg-gold w-6'
+                    : 'bg-neutral-700 group-hover:bg-neutral-500 w-2'
+                }`}
+              />
+            </button>
           ))}
         </div>
       </div>

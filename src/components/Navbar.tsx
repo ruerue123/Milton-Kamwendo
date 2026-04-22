@@ -50,12 +50,16 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          <Link to="/" className="group">
+          <Link to="/" className="group flex items-baseline gap-3">
             <img
-              src="/logo.svg"
-              alt="Milton Kamwendo"
-              className="h-10 w-auto opacity-90 group-hover:opacity-100 transition-opacity"
+              src="/logo-monogram.svg"
+              alt=""
+              aria-hidden="true"
+              className="h-9 w-auto opacity-90 group-hover:opacity-100 transition-opacity"
             />
+            <span className="hidden sm:inline font-serif text-lg tracking-wide text-white/90 group-hover:text-white transition-colors">
+              Milton Kamwendo
+            </span>
           </Link>
 
           {/* Desktop Nav */}
@@ -87,7 +91,7 @@ export function Navbar() {
           {/* Mobile Toggle */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden text-white/80 hover:text-white"
+            className="lg:hidden -mr-2 p-2 text-white/80 hover:text-white"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (

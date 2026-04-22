@@ -9,7 +9,7 @@ const products = [
     description:
       'A powerful guide to pushing past limitations and pressing toward your greatness.',
     category: 'Improvement Series',
-    coverImage: '/ Books/movetheneedle.png',
+    coverImage: '/books/movetheneedle.png',
     badge: 'Bestseller',
     amazonUrl: 'https://www.amazon.com/gp/product/B0DGN68QZS/',
   },
@@ -19,7 +19,7 @@ const products = [
     description:
       'Discover the steps to building a lasting legacy by increasing your personal and professional worth.',
     category: 'Improvement Series',
-    coverImage: '/ Books/increaseyourworth.png',
+    coverImage: '/books/increaseyourworth.png',
     badge: null,
     amazonUrl: 'https://www.amazon.com/gp/product/B0DJDGHC55/',
   },
@@ -29,7 +29,7 @@ const products = [
     description:
       'Practical keys and insights to break through barriers and reach new heights of success.',
     category: 'Improvement Series',
-    coverImage: '/ Books/unlockthenextlevel.png',
+    coverImage: '/books/unlockthenextlevel.png',
     badge: null,
     amazonUrl: 'https://www.amazon.com/stores/Milton-Kamwendo/author/B00JH3YS8Q',
   },
@@ -39,7 +39,7 @@ const products = [
     description:
       'An inspiring call to pursue your dreams with energy, passion, and determination.',
     category: 'Improvement Series',
-    coverImage: '/ Books/danceandpursue.png',
+    coverImage: '/books/danceandpursue.png',
     badge: 'New',
     amazonUrl: 'https://www.amazon.com/stores/Milton-Kamwendo/author/B00JH3YS8Q',
   },
@@ -49,7 +49,7 @@ const products = [
     description:
       'Begin your journey to discovering and pursuing the greatness within you.',
     category: 'Hunt for Greatness Series',
-    coverImage: '/ Books/huntforgreatness.png',
+    coverImage: '/books/huntforgreatness.png',
     badge: null,
     amazonUrl: 'https://www.amazon.com/gp/product/B0DF5N3VCZ/',
   },
@@ -59,7 +59,7 @@ const products = [
     description:
       'Deeper insights, bolder strategies, and more powerful frameworks for transformation.',
     category: 'Hunt for Greatness Series',
-    coverImage: '/ Books/huntforgreatness2.png',
+    coverImage: '/books/huntforgreatness2.png',
     badge: null,
     amazonUrl: 'https://www.amazon.com/gp/product/B0DG663CW9/',
   },
@@ -69,7 +69,7 @@ const products = [
     description:
       'Advanced principles for sustaining greatness and leaving a lasting impact.',
     category: 'Hunt for Greatness Series',
-    coverImage: '/ Books/huntforgreatness3.png',
+    coverImage: '/books/huntforgreatness3.png',
     badge: null,
     amazonUrl: 'https://www.amazon.com/gp/product/B0DGY1FKZS/',
   },
@@ -79,7 +79,7 @@ const products = [
     description:
       'A bold declaration that your time is now. Stop waiting and start unleashing the greatness within.',
     category: 'Improvement Series',
-    coverImage: '/ Books/itstime.png',
+    coverImage: '/books/itstime.png',
     badge: 'Popular',
     amazonUrl: 'https://www.amazon.com/gp/product/B0DKJZPXTZ/',
   },
@@ -130,7 +130,7 @@ export function ShopSection() {
         </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {filteredProducts.map((product, index) => (
             <motion.a
               key={`${product.title}-${product.subtitle}`}

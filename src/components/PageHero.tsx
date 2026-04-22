@@ -42,7 +42,7 @@ export function PageHero({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-display-sm md:text-display font-serif font-bold text-white mb-6"
+          className="text-3xl sm:text-4xl md:text-display-sm lg:text-display font-serif font-bold text-white mb-5 md:mb-6 leading-[1.15] md:leading-[1.05]"
         >
           {title}
         </motion.h1>
@@ -51,7 +51,7 @@ export function PageHero({
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-neutral-400 max-w-2xl mx-auto leading-relaxed font-light"
+            className="text-base md:text-xl text-neutral-400 max-w-2xl mx-auto leading-relaxed font-light"
           >
             {subtitle}
           </motion.p>

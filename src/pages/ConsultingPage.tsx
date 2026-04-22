@@ -4,68 +4,73 @@ import { PageTransition } from '../components/PageTransition';
 import { PageHero } from '../components/PageHero';
 import { CTASection } from '../components/CTASection';
 import { TargetIcon, UsersIcon, CompassIcon, BarChartIcon } from 'lucide-react';
+import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
 const services = [
   {
     icon: CompassIcon,
     title: 'Strategy Consulting',
     description:
-      'Navigate complexity with clear, executable strategies. Milton partners with leadership teams to design roadmaps that turn vision into measurable outcomes.',
+      'Define the mission. Name the battle. Choose the ground. Milton works alongside leadership teams to turn strategy into daily disciplines instead of forgotten slide decks.',
   },
   {
     icon: UsersIcon,
     title: 'Workshop Facilitation',
     description:
-      'Interactive, results-driven sessions designed to align teams, resolve strategic tensions, and build a shared commitment to execution.',
+      'Hands-on sessions that forge mission clarity and team alignment. Your people leave with a shared playbook — and the courage to use it on Monday morning.',
   },
   {
     icon: TargetIcon,
     title: 'Executive Coaching',
     description:
-      'One-on-one strategic partnership for senior leaders. Clarify vision, overcome blind spots, and maximize leadership impact at the highest levels.',
+      'A thinking partner for senior leaders. Clarify purpose, confront blind spots, and build the personal disciplines that separate leaders who drift from leaders who advance.',
   },
   {
     icon: BarChartIcon,
-    title: 'Organizational Development',
+    title: 'Organisational Development',
     description:
-      'Build resilient cultures that attract top talent, sustain high performance, and adapt to change with confidence and speed.',
+      'Build a culture that refuses to play small. Hire the right soldiers, build the right squad, and create the structure that lets growth become inevitable.',
   },
 ];
 
 const process = [
   {
     step: '01',
-    title: 'Discovery',
+    title: 'Discover',
     description:
-      "Deep-dive into your organization's challenges, goals, and culture to understand the real landscape.",
+      "Study the terrain. Listen to the people. Understand the real challenges — not just the ones on the org chart.",
   },
   {
     step: '02',
-    title: 'Diagnosis',
+    title: 'Diagnose',
     description:
-      'Identify the root causes, hidden patterns, and strategic opportunities that others miss.',
+      'Name the root causes. Spot the patterns others miss. Decide where the real leverage lives.',
   },
   {
     step: '03',
     title: 'Design',
     description:
-      'Co-create a tailored strategy and action plan with clear milestones and accountability structures.',
+      'Co-create the playbook — the mission, the milestones, and the daily disciplines that will carry the team through.',
   },
   {
     step: '04',
-    title: 'Delivery',
+    title: 'Deliver',
     description:
-      'Facilitate implementation with hands-on guidance, coaching, and iterative refinement until results are achieved.',
+      'Stay in the fight. Coach through the messy middle. Adjust the method when the terrain changes, but hold the mission.',
   },
 ];
 
 export function ConsultingPage() {
+  useDocumentMeta(
+    'Consulting & Workshops',
+    'Strategy consulting, executive coaching, and workshop facilitation. Milton partners with leadership teams to turn strategic intent into measurable outcomes.'
+  );
   return (
     <PageTransition>
       <PageHero
         eyebrow="Consulting & Workshops"
         title="Strategy That Moves"
-        subtitle="From boardroom to breakthrough — Milton partners with organizations to turn strategic intent into decisive action."
+        subtitle="The world does not reward plans. It rewards action. Milton helps leadership teams close the gap between intention and execution."
         backgroundImage="/milton9.jpeg"
       />
 
@@ -142,8 +147,8 @@ export function ConsultingPage() {
       </section>
 
       <CTASection
-        headline="Let's Build Your Strategy"
-        subtext="Ready to move from intention to execution? Start the conversation today."
+        headline="Stop Planning. Start Advancing."
+        subtext="If your team has been drifting, circling, or stuck between intention and execution — start the conversation. Milton will help you name the next right move."
         buttonText="Start a Conversation"
       />
     </PageTransition>

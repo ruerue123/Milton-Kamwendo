@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { PageTransition } from '../components/PageTransition';
 import { CTASection } from '../components/CTASection';
 import { ArrowRightIcon } from 'lucide-react';
+import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
 const achievements = [
   { value: 20, suffix: '+', label: 'Years Experience' },
@@ -18,6 +19,13 @@ function useCountUp(target: number, inView: boolean, duration = 2000) {
   useEffect(() => {
     if (!inView || hasAnimated.current) return;
     hasAnimated.current = true;
+    const prefersReducedMotion =
+      typeof window !== 'undefined' &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) {
+      setCount(target);
+      return;
+    }
     const start = performance.now();
     const step = (now: number) => {
       const progress = Math.min((now - start) / duration, 1);
@@ -69,6 +77,10 @@ function StatsSection() {
 }
 
 export function AboutPage() {
+  useDocumentMeta(
+    'About',
+    'Milton Kamwendo is an international transformational speaker, strategist, and best-selling author with over two decades of experience unlocking human potential and organizational greatness.'
+  );
   return (
     <PageTransition>
       {/* Opening Statement */}
@@ -95,11 +107,11 @@ export function AboutPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-display-sm md:text-display font-serif font-bold text-white mb-8"
+            className="text-3xl sm:text-4xl md:text-display-sm lg:text-display font-serif font-bold text-white mb-6 md:mb-8 leading-[1.15] md:leading-[1.05]"
           >
-            A Life Dedicated to
+            Inspiring the Greatness
             <br />
-            Unlocking Greatness
+            Trapped Inside You
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 15 }}
@@ -107,9 +119,9 @@ export function AboutPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-neutral-400 leading-relaxed font-light"
           >
-            Milton Kamwendo delivers transformation through thought, strategy, and action.
-            For over two decades, he has been at the forefront of leadership development,
-            organizational strategy, and human potential.
+            Milton is an international transformational speaker, best-selling
+            author, strategy consultant, and leadership coach. His life purpose
+            is to inspire people to release the greatness trapped in them.
           </motion.p>
         </div>
       </section>
@@ -121,14 +133,14 @@ export function AboutPage() {
       {/* Story Section */}
       <section className="py-section-sm md:py-section bg-primary">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
             {/* Image */}
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="sticky top-32"
+              className="lg:sticky lg:top-32"
             >
               <div className="relative">
                 <img
@@ -151,32 +163,36 @@ export function AboutPage() {
                 The Journey
               </p>
               <h2 className="text-heading-sm md:text-heading font-serif font-bold text-white mb-10">
-                From Vision to Execution
+                A Mission to Release Greatness
               </h2>
 
               <div className="space-y-6 text-neutral-400 leading-relaxed">
                 <p>
-                  Milton Kamwendo is a leading international transformational and
-                  motivational speaker, best-selling author, and accomplished workshop
-                  facilitator. With decades of experience, he has dedicated his life to
-                  unlocking human potential and driving organizational excellence.
+                  Milton Kamwendo is a cutting-edge international transformational
+                  speaker, best-selling author, strategy and innovation consultant,
+                  and leadership coach. He has spent over two decades helping
+                  leaders and teams across Africa and beyond refuse to play
+                  small.
                 </p>
                 <p>
-                  As a cutting-edge strategy, team-building, and organization development
-                  consultant, Milton partners with forward-thinking leaders to navigate
-                  complex challenges, foster resilient cultures, and execute strategies
-                  that deliver measurable results.
+                  He is the author of the <em className="text-white not-italic">Hunt for
+                  Greatness</em> series and the <em className="text-white not-italic">Improvement
+                  Series</em> — including <em className="not-italic">Move the Needle</em>,
+                  <em className="not-italic"> Increase Your Worth</em>,
+                  <em className="not-italic"> Unlock the Next Level</em>, and
+                  <em className="not-italic"> It's Time to Unleash Your Greatness</em>.
                 </p>
                 <p>
-                  He has worked with Fortune 500 companies, government agencies, and
-                  non-profit organizations across the globe, bringing a unique blend of
-                  strategic insight and motivational power that leaves lasting impact.
+                  A weekly columnist for <em className="text-white not-italic">The Sunday
+                  Mail</em>, Milton writes and speaks from one conviction: growth
+                  never comes by accident. It is intentional. It is disciplined.
+                  It is forged in the heat of challenge.
                 </p>
                 <p>
-                  His philosophy is rooted in the principle of <em className="text-gold not-italic font-medium">Acta
-                  non Verba</em> — deeds, not words. He challenges leaders and teams to
-                  move beyond rhetoric, urging them to not just multiply words, but to
-                  multiply action.
+                  He partners with forward-thinking leaders to define the
+                  mission, close the gap between strategy and execution, and
+                  build teams that march forward with purpose, passion and
+                  persistence.
                 </p>
               </div>
 
@@ -204,16 +220,17 @@ export function AboutPage() {
             transition={{ duration: 0.6 }}
           >
             <p className="text-gold text-[11px] font-semibold uppercase tracking-[0.25em] mb-8">
-              Core Philosophy
+              Core Conviction
             </p>
-            <h2 className="text-4xl md:text-6xl font-serif font-bold text-white italic mb-8">
-              "Acta non Verba"
+            <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-white italic mb-8 leading-snug md:leading-tight">
+              "Greatness is not a gentle stroll in a garden.<br className="hidden md:block" />
+              It is a march across a battlefield."
             </h2>
             <p className="text-neutral-400 text-lg leading-relaxed font-light">
-              True greatness is forged in the crucible of execution, not in the comfort
-              of intention. Milton challenges every leader he works with to close the gap
-              between knowing and doing — because the world doesn't reward plans. It
-              rewards action.
+              Growth never comes by accident. It is forged in discipline, in
+              courage, in sacrifice — and in the refusal to internalise
+              failure. Every leader Milton works with is challenged to stop
+              drifting and start advancing. To stop wishing and start winning.
             </p>
           </motion.div>
         </div>
@@ -222,7 +239,7 @@ export function AboutPage() {
       {/* Personal Touch */}
       <section className="py-section-sm md:py-section bg-primary">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -237,15 +254,20 @@ export function AboutPage() {
               </h2>
               <div className="space-y-4 text-neutral-400 leading-relaxed">
                 <p>
-                  Beyond the boardrooms and stages, Milton is a voracious reader, a deep
-                  thinker, and someone who genuinely believes that every person carries
-                  within them the seed of something extraordinary.
+                  Beyond the boardrooms and stages, Milton is a voracious
+                  reader, a student of strategy, and a writer who genuinely
+                  believes every person carries the seed of something
+                  extraordinary — waiting to be released.
                 </p>
                 <p>
-                  He writes prolifically — with over eight published books that have
-                  reached readers across Africa and beyond — not for fame, but because
-                  he believes ideas have the power to change lives when they are
-                  accessible.
+                  He writes prolifically because ideas change lives when they
+                  are made accessible. His WhatsApp channel, weekly column,
+                  and growing library of books all serve one purpose: to put
+                  simple, practical playbooks for growth into the hands of
+                  people ready to use them.
+                </p>
+                <p className="text-gold font-serif italic pt-2">
+                  Committed to your greatness.
                 </p>
               </div>
             </motion.div>

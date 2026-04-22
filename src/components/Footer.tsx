@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { LinkedinIcon, TwitterIcon, FacebookIcon, InstagramIcon } from 'lucide-react';
+import { MessageCircleIcon } from 'lucide-react';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -9,13 +9,13 @@ export function Footer() {
     <footer className="bg-primary border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Main Footer */}
-        <div className="py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
+        <div className="py-14 md:py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 lg:gap-16">
           {/* Brand */}
           <div className="lg:col-span-1">
             <img src="/logo.svg" alt="Milton Kamwendo" className="h-14 w-auto mb-6 opacity-80" />
             <p className="text-neutral-500 text-sm leading-relaxed max-w-xs">
-              Transforming leaders and organizations through thought, strategy,
-              and decisive action.
+              Inspiring greatness. Weekly insights, practical playbooks, and
+              strategy for leaders who refuse to drift.
             </p>
           </div>
 
@@ -85,22 +85,17 @@ export function Footer() {
                 </a>
               </li>
             </ul>
-            <div className="flex gap-4 mt-8">
-              {[
-                { Icon: LinkedinIcon, label: 'LinkedIn' },
-                { Icon: TwitterIcon, label: 'Twitter' },
-                { Icon: FacebookIcon, label: 'Facebook' },
-                { Icon: InstagramIcon, label: 'Instagram' },
-              ].map(({ Icon, label }) => (
-                <a
-                  key={label}
-                  href="#"
-                  className="text-neutral-600 hover:text-gold transition-colors duration-300"
-                  aria-label={label}
-                >
-                  <Icon className="w-4 h-4" />
-                </a>
-              ))}
+            <div className="mt-8">
+              <a
+                href="https://whatsapp.com/channel/0029VbC35xIBvvsct1QZMx0t"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-neutral-400 hover:text-gold transition-colors duration-300 text-xs"
+                aria-label="Follow Milton on WhatsApp"
+              >
+                <MessageCircleIcon className="w-4 h-4" strokeWidth={1.5} />
+                Follow on WhatsApp
+              </a>
             </div>
           </div>
         </div>
@@ -111,7 +106,7 @@ export function Footer() {
             &copy; {currentYear} Milton Kamwendo. All rights reserved.
           </p>
           <p className="text-neutral-700 text-xs font-serif italic tracking-wide">
-            Acta non Verba
+            Committed to your greatness.
           </p>
         </div>
       </div>

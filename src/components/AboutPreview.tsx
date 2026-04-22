@@ -25,8 +25,8 @@ export function AboutPreview() {
               <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
             </div>
             {/* Floating stat */}
-            <div className="absolute -bottom-6 -right-4 md:right-8 bg-gold px-8 py-6">
-              <p className="font-serif font-bold text-3xl text-primary">20+</p>
+            <div className="absolute -bottom-4 right-2 md:-bottom-6 md:right-8 bg-gold px-5 py-4 md:px-8 md:py-6">
+              <p className="font-serif font-bold text-2xl md:text-3xl text-primary">20+</p>
               <p className="text-primary/70 text-[10px] uppercase tracking-[0.2em] font-semibold">
                 Years of Impact
               </p>
@@ -43,22 +43,22 @@ export function AboutPreview() {
             <p className="text-gold text-[11px] font-semibold uppercase tracking-[0.25em] mb-4">
               About Milton
             </p>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-8 leading-tight">
-              A Catalyst for
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white mb-6 md:mb-8 leading-tight">
+              Released to Release
               <br />
-              Organizational Greatness
+              the Greatness in You
             </h2>
             <p className="text-neutral-400 leading-relaxed mb-6">
-              Milton Kamwendo is a leading international transformational speaker,
-              best-selling author, and strategy consultant. With decades of
-              experience, he partners with forward-thinking leaders to navigate
-              complex challenges and execute strategies that deliver results.
+              Milton Kamwendo is an international transformational speaker,
+              best-selling author, strategy consultant, and leadership coach.
+              His life purpose is to inspire people to release the greatness
+              trapped inside them.
             </p>
             <p className="text-neutral-500 leading-relaxed mb-10">
-              His philosophy is rooted in{' '}
-              <span className="text-gold font-medium">Acta non Verba</span> —
-              deeds, not words — challenging leaders to multiply action, not
-              rhetoric.
+              Growth never comes by accident. It is intentional and
+              disciplined. Milton partners with leaders and teams who refuse
+              to drift — who are ready to define the mission, do the work,
+              and march forward with purpose, passion and persistence.
             </p>
             <Link
               to="/about"

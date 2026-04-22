@@ -5,33 +5,39 @@ import { Link } from 'react-router-dom';
 const topics = [
   {
     number: '01',
-    title: 'Leadership Excellence',
-    description: 'Navigating complexity with clarity, courage, and conviction.',
+    title: 'Hunt for Greatness',
+    description:
+      'Why playing small is the greatest risk — and the disciplines that pull greatness out of hiding.',
   },
   {
     number: '02',
-    title: 'Innovation & Strategic Thinking',
-    description: 'Designing future-proof strategies that drive organizational growth.',
+    title: 'Move the Needle',
+    description:
+      'Small changes lead to great destinations. The steps that turn intention into measurable impact.',
   },
   {
     number: '03',
-    title: 'Personal Mastery',
-    description: 'Unlocking potential, overcoming limitations, and stepping into greatness.',
+    title: 'Think Like a Soldier',
+    description:
+      'Mission clarity, discipline, resilience, and the victory mindset that forges leaders under fire.',
   },
   {
     number: '04',
-    title: 'Organizational Transformation',
-    description: 'Building resilient cultures that sustain high performance.',
+    title: 'Unlock the Next Level',
+    description:
+      'How teams break through invisible ceilings by refusing to drift and committing to the climb.',
   },
   {
     number: '05',
-    title: 'Team Alignment',
-    description: 'Forging unbreakable bonds and aligning talent toward a powerful vision.',
+    title: 'Communicate for Greatness',
+    description:
+      'Every time you communicate you are auditioning for leadership. Speak, listen, and lead like it.',
   },
   {
     number: '06',
-    title: 'Resilience & Execution',
-    description: 'Cultivating the discipline to move from intention to measurable impact.',
+    title: 'Strategy That Moves',
+    description:
+      'Closing the gap between knowing and doing — because the world does not reward plans, it rewards action.',
   },
 ];
 
@@ -54,8 +60,8 @@ export function TopicsSection() {
             <p className="text-gold text-[11px] font-semibold uppercase tracking-[0.25em] mb-4">
               Signature Topics
             </p>
-            <h2 className="text-4xl md:text-5xl lg:text-display-sm font-serif font-bold text-white">
-              What Milton Speaks On
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-display-sm font-serif font-bold text-white leading-tight">
+              The Playbooks Milton Teaches
             </h2>
           </div>
           <Link

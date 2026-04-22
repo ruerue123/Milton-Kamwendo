@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { PageTransition } from '../components/PageTransition';
 import { PageHero } from '../components/PageHero';
-import { VideoSection } from '../components/VideoSection';
 import { TestimonialsSection } from '../components/TestimonialsSection';
 import { CTASection } from '../components/CTASection';
 import { CheckIcon, ArrowRightIcon } from 'lucide-react';
+import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
 const keynoteTopics = [
   {
@@ -59,12 +59,16 @@ const transformationPoints = [
 ];
 
 export function SpeakingPage() {
+  useDocumentMeta(
+    'Keynote Speaking',
+    'Milton Kamwendo delivers high-impact keynotes on leadership, strategy, and transformation — shifting mindsets and moving audiences to decisive action.'
+  );
   return (
     <PageTransition>
       <PageHero
         eyebrow="Speaking"
-        title="Keynotes That Transform"
-        subtitle="Milton delivers high-impact keynotes that shift thinking, challenge assumptions, and move audiences to decisive action."
+        title="Keynotes That Move Audiences"
+        subtitle="Milton does not come to entertain. He comes to shift the mindset in the room — and send people home with a framework, a challenge, and the courage to act."
         backgroundImage="/milton6.jpeg"
       />
 
@@ -143,12 +147,11 @@ export function SpeakingPage() {
         </div>
       </section>
 
-      <VideoSection />
       <TestimonialsSection />
 
       <CTASection
         headline="Book Milton for Your Next Event"
-        subtext="Whether it is a corporate conference, leadership summit, or executive retreat — Milton's keynotes leave lasting impact."
+        subtext="Corporate conference, leadership summit, executive retreat, or church platform — Milton shows up prepared to move the room."
         buttonText="Book a Keynote"
       />
     </PageTransition>

@@ -36,7 +36,7 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-gold text-[11px] font-semibold uppercase tracking-[0.3em] mb-8"
         >
-          Leadership &middot; Strategy &middot; Transformation
+          Inspiring Greatness &middot; Strategy &middot; Growth
         </motion.p>
 
         {/* Floating gold diamond accent */}
@@ -50,7 +50,7 @@ export function HeroSection() {
         </motion.div>
 
         <motion.h1
-          className="text-5xl md:text-7xl lg:text-[5.5rem] font-serif font-bold text-white leading-[1.05] mb-8"
+          className="text-4xl sm:text-5xl md:text-7xl lg:text-[5.5rem] font-serif font-bold text-white leading-[1.1] md:leading-[1.05] mb-6 md:mb-8"
         >
           <motion.span
             className="block overflow-hidden"
@@ -61,7 +61,7 @@ export function HeroSection() {
               animate={{ y: '0%' }}
               transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
             >
-              You Were Not Born
+              Stop Drifting.
             </motion.span>
           </motion.span>
           <motion.span
@@ -73,7 +73,7 @@ export function HeroSection() {
               animate={{ y: '0%' }}
               transition={{ duration: 0.8, delay: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
             >
-              to Play Small
+              Start Advancing.
             </motion.span>
           </motion.span>
         </motion.h1>
@@ -82,10 +82,11 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
-          className="text-neutral-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-light mb-12"
+          className="text-neutral-400 text-base md:text-xl max-w-2xl mx-auto leading-relaxed font-light mb-10 md:mb-12"
         >
-          Milton Kamwendo delivers transformation through thought, strategy, and
-          action — empowering leaders and organizations to achieve greatness.
+          Greatness is not an accident. It is the result of intentional steps,
+          persistent effort, and purpose-driven pursuit. Milton Kamwendo helps
+          leaders and teams release the greatness trapped within them.
         </motion.p>
 
         <motion.div
@@ -107,7 +108,7 @@ export function HeroSection() {
               to="/speaking"
               className="inline-flex items-center justify-center px-10 py-4 text-sm font-semibold uppercase tracking-[0.15em] text-neutral-300 border border-neutral-700 hover:border-gold/40 hover:text-white transition-all duration-300"
             >
-              Explore Speaking
+              Hunt for Greatness
             </Link>
           </motion.div>
         </motion.div>

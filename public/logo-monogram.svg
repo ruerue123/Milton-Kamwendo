@@ -1,5 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 60" fill="none">
-  <text x="50" y="50" text-anchor="middle"
-    font-family="Georgia, 'Playfair Display', serif" font-weight="900"
-    font-size="60" fill="#FAFAFA" letter-spacing="-4">MK</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 80" fill="none">
+  <defs>
+    <radialGradient id="mkGlow" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="mkBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.2"/>
+    </filter>
+  </defs>
+
+  <!-- Subtle backlight -->
+  <ellipse cx="60" cy="40" rx="50" ry="32" fill="url(#mkGlow)"/>
+
+  <!-- MK monogram, semi-transparent to match the brand treatment -->
+  <g opacity="0.9">
+    <text
+      x="60"
+      y="60"
+      text-anchor="middle"
+      font-family="Impact, 'Arial Black', sans-serif"
+      font-weight="900"
+      font-size="60"
+      fill="#ffffff"
+      letter-spacing="-3"
+    >MK</text>
+  </g>
 </svg>

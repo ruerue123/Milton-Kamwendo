@@ -50,12 +50,12 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          <Link to="/" className="group flex items-baseline gap-3">
+          <Link to="/" className="group flex items-center gap-3" aria-label="Milton Kamwendo — Home">
             <img
               src="/logo-monogram.svg"
               alt=""
               aria-hidden="true"
-              className="h-9 w-auto opacity-90 group-hover:opacity-100 transition-opacity"
+              className="h-10 w-auto opacity-90 group-hover:opacity-100 transition-opacity"
             />
             <span className="hidden sm:inline font-serif text-lg tracking-wide text-white/90 group-hover:text-white transition-colors">
               Milton Kamwendo

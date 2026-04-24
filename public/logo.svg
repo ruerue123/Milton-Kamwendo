@@ -1,15 +1,65 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 160" fill="none" font-family="Georgia, 'Playfair Display', serif">
-  <!-- MK monogram -->
-  <text x="130" y="80" text-anchor="middle"
-    font-weight="900" font-size="96" fill="#FAFAFA" letter-spacing="-6">MK</text>
-  <!-- Wordmark -->
-  <text x="130" y="112" text-anchor="middle"
-    font-weight="400" font-size="20" fill="#FAFAFA" letter-spacing="1">Milton</text>
-  <text x="130" y="134" text-anchor="middle"
-    font-weight="700" font-size="20" fill="#FAFAFA" letter-spacing="1">Kamwendo</text>
-  <!-- Tagline -->
-  <text x="130" y="154" text-anchor="middle"
-    font-weight="400" font-style="italic" font-size="10" fill="#C9A14A" letter-spacing="2">
-    PROMOTING GREATNESS
-  </text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 520" fill="none">
+  <defs>
+    <!-- Soft white glow behind everything -->
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Radial gradient for the backlight glow -->
+    <radialGradient id="backGlow" cx="50%" cy="55%" r="55%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Black canvas -->
+  <rect width="400" height="520" fill="#000000"/>
+
+  <!-- Backlight glow -->
+  <ellipse cx="200" cy="280" rx="170" ry="210" fill="url(#backGlow)"/>
+
+  <!-- MK monogram: semi-transparent white, large, bold, condensed -->
+  <g opacity="0.45" filter="url(#softGlow)">
+    <text
+      x="200"
+      y="300"
+      text-anchor="middle"
+      font-family="Impact, 'Arial Black', sans-serif"
+      font-weight="900"
+      font-size="280"
+      fill="#ffffff"
+      letter-spacing="-14"
+    >MK</text>
+  </g>
+
+  <!-- Wordmark: Milton (outlined) -->
+  <text
+    x="200"
+    y="400"
+    text-anchor="middle"
+    font-family="'Helvetica Neue', 'Arial', sans-serif"
+    font-weight="300"
+    font-size="62"
+    fill="none"
+    stroke="#ffffff"
+    stroke-width="1.5"
+    letter-spacing="1"
+  >Milton</text>
+
+  <!-- Wordmark: Kamwendo (solid, bolder) -->
+  <text
+    x="200"
+    y="470"
+    text-anchor="middle"
+    font-family="'Helvetica Neue', 'Arial', sans-serif"
+    font-weight="700"
+    font-size="62"
+    fill="#ffffff"
+    letter-spacing="1"
+  >Kamwendo</text>
 </svg>

@@ -261,7 +261,7 @@ export function AboutPage() {
                 </p>
                 <p>
                   He writes prolifically because ideas change lives when they
-                  are made accessible. His WhatsApp channel, weekly column,
+                  are made accessible. His WhatsApp channel, daily column,
                   and growing library of books all serve one purpose: to put
                   simple, practical playbooks for growth into the hands of
                   people ready to use them.

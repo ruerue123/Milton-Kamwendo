@@ -12,7 +12,7 @@ const categories = ['All', 'Leadership', 'Strategy', 'Growth'] as const;
 export function InsightsPage() {
   useDocumentMeta(
     'Insights',
-    'Weekly inspiration, next-level thinking, and simple actions that move you from ideas to impact — from Milton Kamwendo.'
+    'Daily inspiration, next-level thinking, and simple actions that move you from ideas to impact — from Milton Kamwendo.'
   );
   const [activeCategory, setActiveCategory] =
     React.useState<(typeof categories)[number]>('All');
@@ -27,7 +27,7 @@ export function InsightsPage() {
       <PageHero
         eyebrow="Insights"
         title="Thinking That Moves"
-        subtitle="Leadership insights, encouragement, and practical playbooks for visible growth. Weekly inspiration that moves you from ideas to impact."
+        subtitle="Leadership insights, encouragement, and practical playbooks for visible growth. Daily inspiration that moves you from ideas to impact."
         backgroundImage="/milton11.jpeg"
       />
 
@@ -55,7 +55,7 @@ export function InsightsPage() {
                   Get Milton's insights as they land on WhatsApp.
                 </h2>
                 <p className="text-neutral-400 leading-relaxed mb-8 max-w-2xl">
-                  Weekly inspiration, next-level thinking, and simple actions
+                  Daily inspiration, next-level thinking, and simple actions
                   that move you from ideas to impact. Join the channel on
                   WhatsApp for the full feed — archived highlights appear below.
                 </p>

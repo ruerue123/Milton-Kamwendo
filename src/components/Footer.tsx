@@ -14,7 +14,7 @@ export function Footer() {
           <div className="lg:col-span-1">
             <img src="/logo.svg" alt="Milton Kamwendo" className="h-14 w-auto mb-6 opacity-80" />
             <p className="text-neutral-500 text-sm leading-relaxed max-w-xs">
-              Inspiring greatness. Weekly insights, practical playbooks, and
+              Inspiring greatness. Daily insights, practical playbooks, and
               strategy for leaders who refuse to drift.
             </p>
           </div>

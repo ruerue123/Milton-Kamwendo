@@ -1,0 +1,30 @@
+# Query: @miltonkamwendo.com
+# ContextLines: 1
+
+8 results - 2 files
+
+src/components/Footer.tsx:
+  77                <li>
+  78:                 <a href="mailto:info@miltonkamwendo.com" className="hover:text-white transition-colors">
+  79:                   info@miltonkamwendo.co.zw
+  80                  </a>
+
+  82                <li>
+  83:                 <a href="mailto:booking@miltonkamwendo.com" className="hover:text-white transition-colors">
+  84:                   booking@miltonkamwendo.co.zw
+  85                  </a>
+
+src/pages/ContactPage.tsx:
+  68                      <a
+  69:                       href="mailto:booking@miltonkamwendo.com"
+  70                        className="text-neutral-400 text-sm hover:text-white transition-colors"
+  71                      >
+  72:                       booking@miltonkamwendo.co.zw
+  73                      </a>
+
+  75                      <a
+  76:                       href="mailto:info@miltonkamwendo.com"
+  77                        className="text-neutral-400 text-sm hover:text-white transition-colors"
+  78                      >
+  79:                       info@miltonkamwendo.co.zw
+  80                      </a>

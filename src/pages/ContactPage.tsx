@@ -66,17 +66,17 @@ export function ContactPage() {
                   <div>
                     <p className="text-white text-sm font-medium mb-1">Email</p>
                     <a
-                      href="mailto:booking@miltonkamwendo.com"
+                      href="mailto:booking@miltonkamwendo.co.zw"
                       className="text-neutral-400 text-sm hover:text-white transition-colors"
                     >
-                      booking@miltonkamwendo.com
+                      booking@miltonkamwendo.co.zw
                     </a>
                     <br />
                     <a
-                      href="mailto:info@miltonkamwendo.com"
+                      href="mailto:info@miltonkamwendo.co.zw"
                       className="text-neutral-400 text-sm hover:text-white transition-colors"
                     >
-                      info@miltonkamwendo.com
+                      info@miltonkamwendo.co.zw
                     </a>
                   </div>
                 </div>

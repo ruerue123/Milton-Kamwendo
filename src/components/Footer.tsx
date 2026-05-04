@@ -75,13 +75,13 @@ export function Footer() {
             </h4>
             <ul className="space-y-3 text-sm text-neutral-400">
               <li>
-                <a href="mailto:info@miltonkamwendo.com" className="hover:text-white transition-colors">
-                  info@miltonkamwendo.com
+                <a href="mailto:info@miltonkamwendo.co.zw" className="hover:text-white transition-colors">
+                  info@miltonkamwendo.co.zw
                 </a>
               </li>
               <li>
-                <a href="mailto:booking@miltonkamwendo.com" className="hover:text-white transition-colors">
-                  booking@miltonkamwendo.com
+                <a href="mailto:booking@miltonkamwendo.co.zw" className="hover:text-white transition-colors">
+                  booking@miltonkamwendo.co.zw
                 </a>
               </li>
             </ul>

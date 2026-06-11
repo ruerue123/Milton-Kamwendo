@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { MenuIcon, XIcon } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
+import { SocialLinks } from './SocialLinks';
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -80,6 +81,7 @@ export function Navbar() {
                 </Link>
               );
             })}
+            <SocialLinks className="border-l border-white/10 pl-6" />
             <Link
               to="/contact"
               className="text-[13px] font-semibold uppercase tracking-[0.1em] text-primary bg-gold hover:bg-gold-light px-6 py-2.5 transition-colors duration-300"
@@ -91,7 +93,7 @@ export function Navbar() {
           {/* Mobile Toggle */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden -mr-2 p-2 text-white/80 hover:text-white"
+            className="lg:hidden -mr-2.5 w-11 h-11 flex items-center justify-center text-white/80 hover:text-white"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
@@ -137,6 +139,9 @@ export function Navbar() {
                 >
                   Book Milton
                 </Link>
+              </div>
+              <div className="pt-6 flex justify-center">
+                <SocialLinks />
               </div>
             </div>
           </motion.div>

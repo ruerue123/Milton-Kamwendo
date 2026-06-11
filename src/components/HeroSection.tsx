@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary">
+    <section className="relative min-h-screen-dynamic flex items-center justify-center overflow-hidden bg-primary py-28 md:py-0">
       {/* Background with Ken Burns */}
       <div className="absolute inset-0 z-0">
         <img
@@ -50,7 +50,7 @@ export function HeroSection() {
         </motion.div>
 
         <motion.h1
-          className="text-4xl sm:text-5xl md:text-7xl lg:text-[5.5rem] font-serif font-bold text-white leading-[1.1] md:leading-[1.05] mb-6 md:mb-8"
+          className="text-[2rem] xs:text-4xl sm:text-5xl md:text-7xl lg:text-[5.5rem] font-serif font-bold text-white leading-[1.1] md:leading-[1.05] mb-6 md:mb-8"
         >
           <motion.span
             className="block overflow-hidden"

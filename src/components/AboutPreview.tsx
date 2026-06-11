@@ -26,9 +26,9 @@ export function AboutPreview() {
             </div>
             {/* Floating stat */}
             <div className="absolute -bottom-4 right-2 md:-bottom-6 md:right-8 bg-gold px-5 py-4 md:px-8 md:py-6">
-              <p className="font-serif font-bold text-2xl md:text-3xl text-primary">20+</p>
+              <p className="font-serif font-bold text-2xl md:text-3xl text-primary">25</p>
               <p className="text-primary/70 text-[10px] uppercase tracking-[0.2em] font-semibold">
-                Years of Impact
+                Year Record
               </p>
             </div>
           </motion.div>
@@ -49,16 +49,17 @@ export function AboutPreview() {
               the Greatness in You
             </h2>
             <p className="text-neutral-400 leading-relaxed mb-6">
-              Milton Kamwendo is an international transformational speaker,
-              best-selling author, strategy consultant, and leadership coach.
-              His life purpose is to inspire people to release the greatness
-              trapped inside them.
+              Milton Kamwendo is a workshop facilitator, strategy &amp;
+              innovation consultant, transformational speaker, and best-selling
+              author with a 25-year record of facilitation impact. His life
+              purpose is to motivate and inspire people to unleash their
+              greatness.
             </p>
             <p className="text-neutral-500 leading-relaxed mb-10">
-              Growth never comes by accident. It is intentional and
-              disciplined. Milton partners with leaders and teams who refuse
-              to drift — who are ready to define the mission, do the work,
-              and march forward with purpose, passion and persistence.
+              Since founding his consultancy in 2003, Milton has facilitated
+              strategy workshops, staff retreats and team-building interventions
+              for more than 500 clients across the private sector, the United
+              Nations system, and civil society.
             </p>
             <Link
               to="/about"

@@ -4,21 +4,27 @@ import { motion, AnimatePresence } from 'framer-motion';
 const testimonials = [
   {
     quote:
-      "Milton's ability to shift the mindset of our executive team was nothing short of remarkable. His philosophy became our new operational standard.",
-    name: 'Sarah Jenkins',
-    title: 'CEO, Global Tech Innovations',
+      'I would recommend Milton at any time to anyone serious about taking business and personal life to the next level. He connects with people at different levels and brings out the best in them. His presentations are well thought out, researched and eloquently delivered.',
+    name: 'LinkedIn Recommendation',
+    title: 'Business Leader',
   },
   {
     quote:
-      "The most impactful strategic facilitation we have ever experienced. Milton doesn't just talk — he guides you to actionable, measurable outcomes.",
-    name: 'David Chen',
-    title: 'Director of Operations, Pan-African Logistics',
+      'There are trainers and there are trainers — Milton falls in the latter category. He facilitates with great enthusiasm that comes from deep within. Through his thought-provoking questions, he brings participants out of their comfort zones.',
+    name: 'LinkedIn Recommendation',
+    title: 'Workshop Participant',
   },
   {
     quote:
-      "A masterclass in leadership and resilience. Milton's keynote left our entire organization energized and ready to tackle the challenges ahead.",
-    name: 'Elena Rodriguez',
-    title: 'VP of Human Resources, Financial Solutions Inc.',
+      'Milton is one of the best success coaches I have ever come across. He is a prolific speaker and a great workshop facilitator. I am greatly impressed with his commitment to excellence, integrity and extremely good results.',
+    name: 'LinkedIn Recommendation',
+    title: 'Client',
+  },
+  {
+    quote:
+      'I have been privileged to witness Milton rise from small beginnings to becoming a highly sought-after international trainer, motivator and strategist.',
+    name: 'LinkedIn Recommendation',
+    title: 'Colleague',
   },
 ];
 

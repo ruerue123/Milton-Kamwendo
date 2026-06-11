@@ -9,6 +9,8 @@ import { OtherBooksStrip } from '../components/OtherBooksStrip';
 import { ImageStrip } from '../components/ImageStrip';
 import { TopicsSection } from '../components/TopicsSection';
 import { TestimonialsSection } from '../components/TestimonialsSection';
+import { ImpactSection } from '../components/ImpactSection';
+import { LogoStrip } from '../components/LogoStrip';
 import { CTASection } from '../components/CTASection';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
@@ -22,6 +24,8 @@ export function HomePage() {
       <HeroSection />
       <FeaturedAppBanner />
       <AboutPreview />
+      <ImpactSection />
+      <LogoStrip />
       <PhilosophySection />
       <ServicesSection />
       <OtherBooksStrip />

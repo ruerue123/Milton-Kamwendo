@@ -7,10 +7,10 @@ import { ArrowRightIcon } from 'lucide-react';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
 const achievements = [
-  { value: 20, suffix: '+', label: 'Years Experience' },
-  { value: 8, suffix: '+', label: 'Books Published' },
+  { value: 25, suffix: '', label: 'Year Record' },
+  { value: 10, suffix: '+', label: 'Books Published' },
   { value: 30, suffix: '+', label: 'Countries' },
-  { value: 500, suffix: '+', label: 'Keynotes' },
+  { value: 500, suffix: '+', label: 'Clients Served' },
 ];
 
 function useCountUp(target: number, inView: boolean, duration = 2000) {
@@ -79,7 +79,7 @@ function StatsSection() {
 export function AboutPage() {
   useDocumentMeta(
     'About',
-    'Milton Kamwendo is an international transformational speaker, strategist, and best-selling author with over two decades of experience unlocking human potential and organizational greatness.'
+    'Milton Kamwendo is a workshop facilitator, strategy & innovation consultant, transformational speaker, and best-selling author with a 25-year record of facilitation impact across more than 500 clients worldwide.'
   );
   return (
     <PageTransition>
@@ -119,9 +119,10 @@ export function AboutPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-neutral-400 leading-relaxed font-light"
           >
-            Milton is an international transformational speaker, best-selling
-            author, strategy consultant, and leadership coach. His life purpose
-            is to inspire people to release the greatness trapped in them.
+            Milton is a workshop facilitator, strategy &amp; innovation
+            consultant, transformational speaker, and best-selling author with a
+            25-year record of facilitation impact. His life purpose is to
+            motivate and inspire people to unleash their greatness.
           </motion.p>
         </div>
       </section>
@@ -168,31 +169,36 @@ export function AboutPage() {
 
               <div className="space-y-6 text-neutral-400 leading-relaxed">
                 <p>
-                  Milton Kamwendo is a cutting-edge international transformational
-                  speaker, best-selling author, strategy and innovation consultant,
-                  and leadership coach. He has spent over two decades helping
-                  leaders and teams across Africa and beyond refuse to play
-                  small.
+                  Milton Kamwendo is an accomplished, high-energy in-person,
+                  online and hybrid workshop facilitator, strategy development
+                  consultant and motivating team-builder with a 25-year record
+                  of facilitation impact. He connects easily with his audience,
+                  stimulates total participation, and produces content-rich,
+                  client-tailored interventions with productive outcomes.
                 </p>
                 <p>
-                  He is the author of the <em className="text-white not-italic">Hunt for
-                  Greatness</em> series and the <em className="text-white not-italic">Improvement
-                  Series</em> — including <em className="not-italic">Move the Needle</em>,
-                  <em className="not-italic"> Increase Your Worth</em>,
-                  <em className="not-italic"> Unlock the Next Level</em>, and
-                  <em className="not-italic"> It's Time to Unleash Your Greatness</em>.
+                  In 2003 he founded his consultancy firm, <em className="text-white not-italic">Insignia
+                  Strategy Consulting / Innov8 Consultoria</em>. Since then he has
+                  developed training workshops, facilitated staff retreats,
+                  team-building sessions, strategy and planning workshops and
+                  capacity-strengthening interventions for more than 500 clients
+                  across the Private Sector, the United Nations Development
+                  System, and Civil Society.
+                </p>
+                <p>
+                  He has facilitated high-level dialogues, symposia and meetings
+                  for Governments, Inter-Parliamentary bodies and United Nations
+                  agencies, and delivered keynote and motivational addresses at
+                  conferences and events across more than 30 countries.
                 </p>
                 <p>
                   A weekly columnist for <em className="text-white not-italic">The Sunday
-                  Mail</em>, Milton writes and speaks from one conviction: growth
-                  never comes by accident. It is intentional. It is disciplined.
-                  It is forged in the heat of challenge.
-                </p>
-                <p>
-                  He partners with forward-thinking leaders to define the
-                  mission, close the gap between strategy and execution, and
-                  build teams that march forward with purpose, passion and
-                  persistence.
+                  Mail</em> and the author of more than 10 books — including the
+                  <em className="not-italic"> Hunt for Greatness</em> series and the
+                  <em className="not-italic"> Improvement Series</em> — Milton writes
+                  and speaks from one conviction: growth never comes by accident.
+                  It is intentional. It is disciplined. It is forged in the heat
+                  of challenge.
                 </p>
               </div>
 
@@ -261,10 +267,14 @@ export function AboutPage() {
                 </p>
                 <p>
                   He writes prolifically because ideas change lives when they
-                  are made accessible. His WhatsApp channel, daily column,
+                  are made accessible. His WhatsApp channel, weekly column,
                   and growing library of books all serve one purpose: to put
                   simple, practical playbooks for growth into the hands of
                   people ready to use them.
+                </p>
+                <p>
+                  Milton is married to Florence and is the father of three
+                  children — Mukundi, Munangi and Muvaki.
                 </p>
                 <p className="text-gold font-serif italic pt-2">
                   Committed to your greatness.

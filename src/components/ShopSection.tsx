@@ -118,7 +118,7 @@ export function ShopSection() {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`text-[12px] font-semibold uppercase tracking-[0.15em] px-5 py-2 border transition-all duration-300 ${
+              className={`text-[12px] font-semibold uppercase tracking-[0.15em] px-5 min-h-[44px] inline-flex items-center border transition-all duration-300 ${
                 activeCategory === category
                   ? 'border-gold text-gold'
                   : 'border-white/10 text-neutral-500 hover:text-white hover:border-white/20'

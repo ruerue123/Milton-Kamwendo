@@ -65,33 +65,37 @@ export function PhilosophySection() {
         </div>
 
         {/* Controls */}
-        <div className="flex items-center justify-center gap-8 mt-14">
+        <div className="flex items-center justify-center gap-4 sm:gap-8 mt-14">
           <button
             onClick={prev}
-            className="w-10 h-10 border border-white/10 hover:border-gold/40 flex items-center justify-center text-neutral-500 hover:text-gold transition-all duration-300"
+            className="w-11 h-11 border border-white/10 hover:border-gold/40 flex items-center justify-center text-neutral-500 hover:text-gold transition-all duration-300"
             aria-label="Previous quote"
           >
             <ChevronLeftIcon className="w-5 h-5" />
           </button>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-1">
             {statements.map((_, i) => (
               <button
                 key={i}
                 onClick={() => goTo(i)}
-                className={`h-[2px] transition-all duration-500 cursor-pointer ${
-                  i === current
-                    ? 'w-8 bg-gold'
-                    : 'w-4 bg-white/10 hover:bg-white/20'
-                }`}
+                className="h-11 px-1.5 flex items-center group"
                 aria-label={`Go to quote ${i + 1}`}
-              />
+              >
+                <span
+                  className={`block h-[2px] transition-all duration-500 ${
+                    i === current
+                      ? 'w-8 bg-gold'
+                      : 'w-4 bg-white/10 group-hover:bg-white/20'
+                  }`}
+                />
+              </button>
             ))}
           </div>
 
           <button
             onClick={next}
-            className="w-10 h-10 border border-white/10 hover:border-gold/40 flex items-center justify-center text-neutral-500 hover:text-gold transition-all duration-300"
+            className="w-11 h-11 border border-white/10 hover:border-gold/40 flex items-center justify-center text-neutral-500 hover:text-gold transition-all duration-300"
             aria-label="Next quote"
           >
             <ChevronRightIcon className="w-5 h-5" />

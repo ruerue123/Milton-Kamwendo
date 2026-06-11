@@ -1,1 +1,8 @@
-/*  /index.html  200
+# Prerendered routes are served as static HTML automatically by Netlify
+# (it checks the filesystem before applying these rules).
+# Dynamic insight detail pages are not prerendered, so fall back to the
+# insights shell for client-side hydration.
+/insights/*   /insights/index.html   200
+
+# Final SPA fallback for any unknown path.
+/*            /index.html            200

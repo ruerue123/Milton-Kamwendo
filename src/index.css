@@ -18,6 +18,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #0B0B0B;
   color: #FAFAFA;
+  /* Guard against any stray horizontal scroll on small screens. */
+  overflow-x: hidden;
+}
+
+/* Full-viewport hero that accounts for mobile browser chrome (URL bar).
+   Falls back to 100vh where dynamic viewport units aren't supported. */
+.min-h-screen-dynamic {
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 h1, h2, h3, h4, h5, h6 {

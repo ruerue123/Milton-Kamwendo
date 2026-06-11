@@ -5,39 +5,39 @@ import { Link } from 'react-router-dom';
 const topics = [
   {
     number: '01',
-    title: 'Hunt for Greatness',
+    title: 'Teamworking & Strategic Execution',
     description:
-      'Why playing small is the greatest risk — and the disciplines that pull greatness out of hiding.',
+      'Building aligned teams that close the gap between strategy and daily execution.',
   },
   {
     number: '02',
-    title: 'Move the Needle',
+    title: 'Strategy in Turbulent Environments',
     description:
-      'Small changes lead to great destinations. The steps that turn intention into measurable impact.',
+      'Strategy planning, review and workplanning for leaders navigating uncertainty and change.',
   },
   {
     number: '03',
-    title: 'Think Like a Soldier',
+    title: 'Innovation & Lean Thinking',
     description:
-      'Mission clarity, discipline, resilience, and the victory mindset that forges leaders under fire.',
+      'Creative thinking, lean methodologies and problem-solving that move organisations forward.',
   },
   {
     number: '04',
-    title: 'Unlock the Next Level',
+    title: 'Adaptive Leadership & Change',
     description:
-      'How teams break through invisible ceilings by refusing to drift and committing to the climb.',
+      'Effective, adaptive leadership and change management for a world that refuses to stand still.',
   },
   {
     number: '05',
-    title: 'Communicate for Greatness',
+    title: 'Presentation & Facilitation Skills',
     description:
-      'Every time you communicate you are auditioning for leadership. Speak, listen, and lead like it.',
+      'Communicate, present and facilitate with confidence — in person, online and hybrid.',
   },
   {
     number: '06',
-    title: 'Strategy That Moves',
+    title: 'Negotiation, Persuasion & Influence',
     description:
-      'Closing the gap between knowing and doing — because the world does not reward plans, it rewards action.',
+      'The skills of negotiation, persuasion, influence, mentoring and coaching that build leaders.',
   },
 ];
 

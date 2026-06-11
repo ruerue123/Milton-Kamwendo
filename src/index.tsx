@@ -1,6 +1,14 @@
 import "./index.css";
 import React from "react";
-import { render } from "react-dom";
+import { hydrateRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
 import { App } from "./App";
 
-render(<App />, document.getElementById("root"));
+const container = document.getElementById("root")!;
+
+hydrateRoot(
+  container,
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+);

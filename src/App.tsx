@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  BrowserRouter as Router,
   Routes,
   Route,
   useLocation,
@@ -37,14 +36,12 @@ function AnimatedRoutes() {
 
 export function App() {
   return (
-    <Router>
-      <div className="min-h-screen bg-primary text-neutral-50 font-sans flex flex-col">
-        <Navbar />
-        <main className="flex-grow">
-          <AnimatedRoutes />
-        </main>
-        <Footer />
-      </div>
-    </Router>
+    <div className="min-h-screen bg-primary text-neutral-50 font-sans flex flex-col">
+      <Navbar />
+      <main className="flex-grow">
+        <AnimatedRoutes />
+      </main>
+      <Footer />
+    </div>
   );
 }

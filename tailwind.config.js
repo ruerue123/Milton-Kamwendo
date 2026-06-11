@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: '400px',
+      },
       colors: {
         primary: '#0B0B0B',
         'primary-light': '#141414',
@@ -41,7 +44,9 @@ export default {
         '22': '5.5rem',
         '30': '7.5rem',
         'section': '8rem',
-        'section-sm': '5rem',
+        // Mobile-first section padding; components pair this with `md:py-section`
+        // for the larger desktop rhythm.
+        'section-sm': '3.5rem',
       },
       keyframes: {
         shimmer: {

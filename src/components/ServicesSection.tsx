@@ -7,21 +7,21 @@ const services = [
   {
     title: 'Keynote Speaking',
     description:
-      'Keynotes that shift mindsets, not just schedules. Audiences leave with a framework, a challenge, and the courage to act.',
+      'Transformational and motivational keynotes for conferences, events and seminars. Audiences leave with a framework, a challenge, and the courage to act.',
     link: '/speaking',
     image: '/milton5.jpg',
   },
   {
-    title: 'Strategy & Consulting',
+    title: 'Strategy & Innovation',
     description:
-      'Close the gap between strategy and execution. Milton partners with leadership teams to turn vision into daily disciplines.',
+      'Strategy planning in turbulent environments, strategy review and workplanning. Milton partners with leadership teams to close the gap between strategy and execution.',
     link: '/consulting',
     image: '/milton9.jpeg',
   },
   {
     title: 'Workshops & Facilitation',
     description:
-      'Hands-on sessions that build mission clarity, forge team alignment, and equip people to march forward together.',
+      'In-person, online and hybrid facilitation of staff retreats, team-building, capacity strengthening and high-level dialogues that forge alignment and buy-in.',
     link: '/consulting',
     image: '/milton10.jpeg',
   },

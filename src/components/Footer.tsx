@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MessageCircleIcon } from 'lucide-react';
+import { SocialLinks } from './SocialLinks';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -84,18 +84,17 @@ export function Footer() {
                   booking@miltonkamwendo.co.zw
                 </a>
               </li>
+              <li>
+                <a href="https://wa.me/263772422634" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                  +263 772 422634
+                </a>
+              </li>
             </ul>
             <div className="mt-8">
-              <a
-                href="https://whatsapp.com/channel/0029VbC35xIBvvsct1QZMx0t"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-neutral-400 hover:text-gold transition-colors duration-300 text-xs"
-                aria-label="Follow Milton on WhatsApp"
-              >
-                <MessageCircleIcon className="w-4 h-4" strokeWidth={1.5} />
-                Follow on WhatsApp
-              </a>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-500 mb-4">
+                Follow Milton
+              </p>
+              <SocialLinks />
             </div>
           </div>
         </div>

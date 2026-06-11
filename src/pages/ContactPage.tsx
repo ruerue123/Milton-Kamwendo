@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { PageTransition } from '../components/PageTransition';
 import { PageHero } from '../components/PageHero';
-import { SendIcon, MailIcon, MapPinIcon } from 'lucide-react';
+import { SendIcon, MailIcon, MapPinIcon, MessageCircleIcon } from 'lucide-react';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
 export function ContactPage() {
@@ -82,11 +82,27 @@ export function ContactPage() {
                 </div>
 
                 <div className="flex gap-4">
+                  <MessageCircleIcon className="w-5 h-5 text-gold mt-0.5" strokeWidth={1.5} />
+                  <div>
+                    <p className="text-white text-sm font-medium mb-1">WhatsApp &amp; Mobile</p>
+                    <a
+                      href="https://wa.me/263772422634"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-neutral-400 text-sm hover:text-white transition-colors"
+                    >
+                      +263 772 422634
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex gap-4">
                   <MapPinIcon className="w-5 h-5 text-gold mt-0.5" strokeWidth={1.5} />
                   <div>
                     <p className="text-white text-sm font-medium mb-1">Location</p>
                     <p className="text-neutral-400 text-sm">
-                      Available globally for keynotes and consulting
+                      Based in Harare, Zimbabwe — available globally for keynotes
+                      and consulting.
                     </p>
                   </div>
                 </div>

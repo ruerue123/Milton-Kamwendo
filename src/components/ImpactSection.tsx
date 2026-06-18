@@ -8,24 +8,6 @@ const stats = [
   { value: 10, suffix: '+', label: 'Books Published', sub: 'plus a weekly column' },
 ];
 
-const sectors = [
-  {
-    title: 'United Nations System',
-    body:
-      'FAO, UNDP, UNICEF, UN Women, WFP, UNFPA, UNHCR, WHO, UNOPS and UN Country Teams across Africa — from high-level dialogues to regional retreats.',
-  },
-  {
-    title: 'Private Sector',
-    body:
-      'Seed Co, ZHL Group, ART Corporation, TSL Limited, AFC Holdings, Zamtel, Old Mutual, Econet, Delta, Stanbic, CBZ and many more — group and business-unit strategy.',
-  },
-  {
-    title: 'Civil Society & Government',
-    body:
-      'Plan International, HIVOS, ICRC, Search for Common Ground, ECOWAS, ECOSOC and national institutions — strategy, dialogue and team-building.',
-  },
-];
-
 function useCountUp(target: number, inView: boolean, duration = 2000) {
   const [count, setCount] = useState(0);
   const hasAnimated = useRef(false);
@@ -102,30 +84,9 @@ export function ImpactSection() {
         </div>
 
         {/* Headline stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8 mb-16 md:mb-24">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8">
           {stats.map((stat, i) => (
             <StatItem key={stat.label} stat={stat} delay={i * 0.1} />
-          ))}
-        </div>
-
-        {/* Sector breakdown */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/5">
-          {sectors.map((sector, i) => (
-            <motion.div
-              key={sector.title}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="bg-primary-light p-8 md:p-10"
-            >
-              <h3 className="font-serif text-xl font-bold text-white mb-4">
-                {sector.title}
-              </h3>
-              <p className="text-neutral-400 text-sm leading-relaxed">
-                {sector.body}
-              </p>
-            </motion.div>
           ))}
         </div>
       </div>

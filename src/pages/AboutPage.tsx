@@ -3,6 +3,7 @@ import { motion, useInView } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { PageTransition } from '../components/PageTransition';
 import { CTASection } from '../components/CTASection';
+import { SectorBreakdown } from '../components/SectorBreakdown';
 import { ArrowRightIcon } from 'lucide-react';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
@@ -216,8 +217,11 @@ export function AboutPage() {
         </div>
       </section>
 
+      {/* Sector breakdown — who Milton serves */}
+      <SectorBreakdown />
+
       {/* Philosophy */}
-      <section className="py-section-sm md:py-section bg-primary-light border-y border-white/5">
+      <section className="py-section-sm md:py-section bg-primary border-b border-white/5">
         <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

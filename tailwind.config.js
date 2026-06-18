@@ -65,12 +65,17 @@ export default {
           '0%': { transform: 'scale(1.0)' },
           '100%': { transform: 'scale(1.15)' },
         },
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
       },
       animation: {
         shimmer: 'shimmer 3s ease-in-out infinite',
         float: 'float 6s ease-in-out infinite',
         'pulse-gold': 'pulse-gold 4s ease-in-out infinite',
         'ken-burns': 'ken-burns 20s ease-in-out infinite alternate',
+        marquee: 'marquee 40s linear infinite',
       },
     },
   },

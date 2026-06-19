@@ -1,7 +1,6 @@
 import React from 'react';
 import { PageTransition } from '../components/PageTransition';
 import { HeroSection } from '../components/HeroSection';
-import { FeaturedAppBanner } from '../components/FeaturedAppBanner';
 import { AboutPreview } from '../components/AboutPreview';
 import { ServicesSection } from '../components/ServicesSection';
 import { OtherBooksStrip } from '../components/OtherBooksStrip';
@@ -19,7 +18,6 @@ export function HomePage() {
   return (
     <PageTransition>
       <HeroSection />
-      <FeaturedAppBanner />
       <AboutPreview />
       <ImpactSection />
       <LogoStrip />
